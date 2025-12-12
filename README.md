@@ -41,18 +41,24 @@ The tool is designed to be robust against:
 
 ### 1. Clone the repository
 
-git clone <your-repo-url>
+```bash
+git clone https://github.com/Brunstorp/ytvideo-transcriber.git
 cd ytvideo-transcriber
+```
 
 ---
 
 ### 2. Install system dependency
 
 macOS:
+```bash
 brew install ffmpeg
+```
 
 Ubuntu / Debian:
+```bash
 sudo apt install ffmpeg
+```
 
 Verify:
 ffmpeg -version
@@ -72,7 +78,9 @@ This creates an isolated virtual environment with all required dependencies.
 
 Create a .env file in the project root:
 
+```bash
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
+```
 
 Do not commit this file.
 
@@ -83,11 +91,15 @@ Do not commit this file.
 You can run the tool either by entering the pipenv shell or by prefixing commands with pipenv run.
 
 Option A: pipenv shell
+```bash
 pipenv shell
 python transcriber.py watch?v=1BHOflzxPjI
+```
 
 Option B: one-shot execution
+```bash
 pipenv run python transcriber.py watch?v=1BHOflzxPjI
+```
 
 ---
 
@@ -95,11 +107,13 @@ pipenv run python transcriber.py watch?v=1BHOflzxPjI
 
 All of the following are valid:
 
+```bash
 python transcriber.py 1BHOflzxPjI
 python transcriber.py watch?v=1BHOflzxPjI
 python transcriber.py watch?v=1BHOflzxPjI&t=10s
 python transcriber.py https://www.youtube.com/watch?v=1BHOflzxPjI
 python transcriber.py https://www.youtube.com/watch?\v\=1BHOflzxPjI&t=1s
+```
 
 Malformed or escaped input is normalized automatically.
 
