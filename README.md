@@ -166,4 +166,4 @@ __pycache__/
 
 ## License
 
-MIT (or choose your preferred license)
+MIT
